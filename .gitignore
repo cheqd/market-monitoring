@@ -1,0 +1,7 @@
+.nimbella
+__deployer__.zip
+__pycache__/
+node_modules
+.DS_Store
+coverage/
+package-lock.json

@@ -1,0 +1,5 @@
+packages:
+  - name: coingecko-tickers
+    actions:
+      - name: arbitrage
+        runtime: 'nodejs:default'
