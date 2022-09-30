@@ -15,5 +15,22 @@
       }
     },
     "webHashes": {}
+  },
+  {
+    "apihost": "https://faas-blr1-8177d592.doserverless.co",
+    "namespace": "fn-b3508953-f3ad-4a82-86bf-9c4245be30ea",
+    "packageVersions": {
+      "coingecko-tickers": {
+        "version": "0.0.1",
+        "digest": "fb7aec9f3e3a9d98934b1ba314fff3b5840143458843715efea8359ec4bd9390"
+      }
+    },
+    "actionVersions": {
+      "coingecko-tickers/arbitrage": {
+        "version": "0.0.1",
+        "digest": "83d514eba55a8bf488885c2ff1f2e5eb2190256cb2ecca0a18440e31558a0c74"
+      }
+    },
+    "webHashes": {}
   }
 ]
