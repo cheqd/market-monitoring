@@ -1,14 +1,8 @@
-const https = require("https");
-
 const {
   getCoinGeckoTickersDataForCheqdToken,
-} = require("./api/coinGeckoTickersForCheqd");
-const { FlagArbitrage } = require("./app/flagArbitrage");
-const { Tickers } = require("./app/tickers");
-
-async function main() {
-  return await pricesAndPossibleArbitrageOpportunites();
-}
+} = require("../api/coinGeckoTickersForCheqd");
+const { FlagArbitrage } = require("./flagArbitrage");
+const { Tickers } = require("./tickers");
 
 async function pricesAndPossibleArbitrageOpportunites() {
   const coinGeckoData = await getCoinGeckoTickersDataForCheqdToken();
@@ -24,4 +18,5 @@ async function pricesAndPossibleArbitrageOpportunites() {
   };
 }
 
-exports.main = main;
+exports.pricesAndPossibleArbitrageOpportunites =
+  pricesAndPossibleArbitrageOpportunites;
