@@ -1,29 +1,14 @@
 const express = require("express");
+const createError = require("http-errors");
 const app = express();
 
-const {
-  getCoinGeckoTickersDataForCheqdToken,
-} = require("./api/coinGeckoTickersForCheqd");
-const { FlagArbitrage } = require("./app/flagArbitrage");
-const { Tickers } = require("./app/tickers");
+const arbitrageRouter = require("./routes/arbitrage");
 
-async function pricesAndPossibleArbitrageOpportunites() {
-  const coinGeckoData = await getCoinGeckoTickersDataForCheqdToken();
-  const flagArbitrage = new FlagArbitrage();
-  const tickers = new Tickers();
-  const prices = tickers.getPrices(coinGeckoData.tickers);
-  const arbitrageOpportunities = flagArbitrage.arbitrageOpportunities(prices);
-
-  return {
-    prices: prices,
-    arbitrageOpportunities: arbitrageOpportunities,
-    hasArbitrageOpportunities: arbitrageOpportunities.length > 0,
-  };
-}
-
-app.get("/", async (req, res) => {
-  const data = await pricesAndPossibleArbitrageOpportunites();
-  res.json(data);
+app.use("/arbitrage", arbitrageRouter);
+app.use((_, __, next) => {
+  next(createError(404));
 });
 
-app.listen(3000, () => console.log("Listenin on 3000."));
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => console.log(`Listening on ${port}!`));

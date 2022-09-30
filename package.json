@@ -1,10 +1,10 @@
 {
   "name": "market-monitoring",
   "version": "1.0.0",
-  "description": "This repository contains a Digital Ocean function that fetchs latest price of `CHEQ` token accross different markets using [CoinGecko's API](https://www.coingecko.com/en/api). In addition, it calculates and returns possible abitrage opportunties if present.",
+  "description": "This repository contains a Digital Ocean app that fetchs latest price of `CHEQ` token accross different markets using [CoinGecko's API](https://www.coingecko.com/en/api). In addition, it calculates and returns possible abitrage opportunties if present.",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",

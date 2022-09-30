@@ -4,42 +4,14 @@
 
 This repository contains a Digital Ocean function that fetchs latest price of `CHEQ` token accross different markets using [CoinGecko's API](https://www.coingecko.com/en/api). In addition, it calculates and returns possible abitrage opportunties if present.
 
-## Deploying the Function
+## Local setup
 
-1. [First Install and Configure](https://docs.digitalocean.com/reference/doctl/how-to/install/) `doctl`
-2. Connect to the namespace `cg-api`
+`npm install`
+`npm start`
 
-```bash
-doctl serverless connect
-```
+### /arbitrage
 
-3. Deploy a Function in the Current Namespace
-
-```bash
-doctl serverless deploy cg-api
-```
-
-4. You can get URL for your deployed function using command below passing your function name. In our case our function name will be `coingecko-tickers/arbitrage`
-
-```bash
-doctl sbx fn get <funcName> --url
-```
-
-5. Alternatively, you can go to [dashboard](https://cloud.digitalocean.com/functions/) and get it.
-
-## Using the Function
-
-You can invoke the function using the REST API. All APIs are protected with HTTP Basic authentication. See example below
-
-```
-curl -X POST "https://faas-blr1-8177d592.doserverless.co/api/v1/namespaces/fn-6d0a7473-a6eb-4404-8601-a3bd56525b02/actions/coingecko-tickers/arbitrage?blocking=true&result=true" \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Basic <TOKEN>
-```
-
-### coingecko-tickers/arbitrage
-
-`coingecko-tickers/arbitrage` function returns a json with following `properties`.
+> returns a json with following `properties`.
 
 1. `arbitrageOpportunities` an array of market pairs which caused the possible arbitrage opportunity, as well as the percentage difference among the two markets. Example element of `arbitrageOpportunities` array.
 
@@ -71,7 +43,7 @@ curl -X POST "https://faas-blr1-8177d592.doserverless.co/api/v1/namespaces/fn-6d
 
 3. `hasArbitrageOpportunities` a boolean which will set to `true` if there are any market arbitrage.
 
-### coingecko-tickers/arbitrage function sample response
+### `/arbitrage` sample response
 
 ```json
 {
