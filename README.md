@@ -1,8 +1,8 @@
-# Coin Gecko API Function: Node.js
+# Market Monitoring
 
 ## Introduction
 
-This repository contains a Digital Ocean function that fetchs latest price of `CHEQ` token accross different markets using [CoinGecko's API](https://www.coingecko.com/en/api). In addition, it calculates and returns possible abitrage opportunties if present.
+This repository contains a Digital Ocean app that fetchs latest price of `CHEQ` token accross different markets using [CoinGecko's API](https://www.coingecko.com/en/api). In addition, it calculates and returns possible abitrage opportunties if present.
 
 ## Deploying the Function
 
