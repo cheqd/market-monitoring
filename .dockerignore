@@ -1,6 +1,5 @@
 # Skip unncecessary folders
 .github
-.next
 dist
 cypress
 node_modules
