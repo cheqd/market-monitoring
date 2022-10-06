@@ -1,8 +1,8 @@
 const {
   getCoinGeckoTickersDataForCheqdToken,
-} = require("../api/coinGeckoTickersForCheqd");
-const { FlagArbitrage } = require("./flagArbitrage");
-const { Tickers } = require("./tickers");
+} = require('../api/coinGeckoTickersForCheqd');
+const { FlagArbitrage } = require('./arbitrageOpportunities');
+const { Tickers } = require('./tickers');
 
 async function pricesAndPossibleArbitrageOpportunites() {
   const coinGeckoData = await getCoinGeckoTickersDataForCheqdToken();
@@ -14,7 +14,6 @@ async function pricesAndPossibleArbitrageOpportunites() {
   return {
     prices: prices,
     arbitrageOpportunities: arbitrageOpportunities,
-    hasArbitrageOpportunities: arbitrageOpportunities.length > 0,
   };
 }
 

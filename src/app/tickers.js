@@ -1,4 +1,4 @@
-const { COIN_GECKO_CHEQ_COIN_ID } = require("../helpers/constants");
+const { COIN_GECKO_CHEQ_COIN_ID } = require('../helpers/constants');
 
 class Tickers {
   getPrices(coingeckoTickers) {
