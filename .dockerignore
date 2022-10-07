@@ -1,0 +1,12 @@
+# Skip unncecessary folders
+.github
+dist
+cypress
+node_modules
+tests
+
+# Skip unnecessary files
+**/*.md
+Dockerfile**
+npm-debug.log
+.env

@@ -4,36 +4,21 @@
   "description": "This repository contains a Digital Ocean app that fetchs latest price of `CHEQ` token accross different markets using [CoinGecko's API](https://www.coingecko.com/en/api). In addition, it calculates and returns possible abitrage opportunties if present.",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
-    "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'"
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cheqd/market-monitoring.git"
   },
   "keywords": [],
-  "license": "Apache-2.0",
-  "author": "Cheqd Foundation Limited (https://github.com/cheqd)",
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/cheqd/market-monitoring/issues"
   },
   "homepage": "https://github.com/cheqd/market-monitoring#readme",
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "javascript",
-      "prettier"
-    ]
-  },
   "dependencies": {
     "coingecko-api": "^1.0.10",
     "express": "^4.18.1"
-  },
-  "devDependencies": {
-    "conventional-changelog-conventionalcommits": "^5.0.0",
-    "eslint": "^8.24.0",
-    "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.7.1"
   }
 }
