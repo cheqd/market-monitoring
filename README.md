@@ -14,9 +14,9 @@ This repository contains a Digital Ocean app that fetchs latest price of `CHEQ` 
 
 ## Baseurl
 
-staging - https://market-monitoring-staging.cheqd.net
+staging - `https://market-monitoring-staging.cheqd.net`
 
-production - https://market-monitoring.cheqd.net
+production - `https://market-monitoring.cheqd.net`
 
 ## Endpoints
 
