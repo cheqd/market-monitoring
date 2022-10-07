@@ -10,12 +10,16 @@ This repository contains a Digital Ocean app that fetchs latest price of `CHEQ` 
 
 `npm start`
 
+[Contributing Guide](CONTRIBUTING.md)
+
+## Baseurl
+
+staging - https://market-monitoring-staging.cheqd.net
+
+production - https://market-monitoring.cheqd.net
+
 ## Endpoints
-
-### /arbitrage/all
-
-- returns prices and arbitrage opptutinies
 
 ### /arbitrage
 
-- returns an array of arbitrage opportunities per market pair.
+- returns an prices across different market and arbitrage opportunities per market pair.
