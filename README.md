@@ -4,7 +4,7 @@
 
 [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/cheqd/market-monitoring?include_prereleases&label=dev%20release&style=flat-square)](https://github.com/cheqd/market-monitoring/releases/) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/cheqd/market-monitoring/latest?style=flat-square) [![GitHub contributors](https://img.shields.io/github/contributors/cheqd/market-monitoring?label=contributors%20%E2%9D%A4%EF%B8%8F&style=flat-square)](https://github.com/cheqd/market-monitoring/graphs/contributors)
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/cheqd/market-monitoring/Workflow%20Dispatch?label=workflows&style=flat-square)](https://github.com/cheqd/market-monitoring/actions/workflows/dispatch.yml) [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/cheqd/market-monitoring/CodeQL?label=CodeQL&style=flat-square)](https://github.com/cheqd/market-monitoring/actions/workflows/codeql.yml) ![GitHub repo size](https://img.shields.io/github/repo-size/cheqd/market-monitoring?style=flat-square)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/cheqd/market-monitoring/Workflow%20Dispatch?label=workflows&style=flat-square)](https://github.com/cheqd/market-monitoring/actions/workflows/dispatch.yml) ![GitHub repo size](https://img.shields.io/github/repo-size/cheqd/market-monitoring?style=flat-square)
 
 ## ℹ️ Overview
 
