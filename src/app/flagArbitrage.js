@@ -18,7 +18,7 @@ class FlagArbitrage {
           arbitrageOpportunities.push({
             market_a: prices[i],
             market_b: prices[j],
-            percentage_delta: percentage_delta,
+            percentage_delta: percentage_delta
           });
         }
       }
