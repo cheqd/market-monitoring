@@ -1,24 +1,43 @@
 {
-  "name": "market-monitoring",
+  "name": "@cheqd/market-monitoring",
   "version": "1.0.0",
-  "description": "This repository contains a Digital Ocean app that fetchs latest price of `CHEQ` token accross different markets using [CoinGecko's API](https://www.coingecko.com/en/api). In addition, it calculates and returns possible abitrage opportunties if present.",
-  "main": "index.js",
+  "description": "cheqd Market Monitoring API",
+  "source": "src/index.js",
+  "main": "src/index.js",
+  "license": "Apache-2.0",
+	"author": "Cheqd Foundation Limited (https://github.com/cheqd)",
+	"repository": "https://github.com/cheqd/market-monitoring.git",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
+    "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cheqd/market-monitoring.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cheqd/market-monitoring/issues"
-  },
-  "homepage": "https://github.com/cheqd/market-monitoring#readme",
+  "eslintConfig": {
+		"root": true,
+		"extends": [
+			"typescript",
+			"prettier"
+		]
+	},
   "dependencies": {
     "coingecko-api": "^1.0.10",
     "express": "^4.18.1"
-  }
+  },
+  "devDependencies": {
+		"@semantic-release/changelog": "^6.0.1",
+		"@semantic-release/commit-analyzer": "^9.0.2",
+		"@semantic-release/git": "^10.0.1",
+		"@semantic-release/github": "^8.0.6",
+		"@semantic-release/npm": "^9.0.1",
+		"@semantic-release/release-notes-generator": "^10.0.3",
+		"conventional-changelog-conventionalcommits": "^5.0.0",
+		"eslint": "^8.24.0",
+		"eslint-config-prettier": "^8.1.0",
+		"eslint-config-typescript": "^3.0.0",
+		"semantic-release": "^19.0.5"
+	},
+  "publishConfig": {
+		"registry": "https://registry.npmjs.org/",
+		"access": "public"
+    }
 }
