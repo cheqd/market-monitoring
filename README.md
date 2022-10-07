@@ -1,13 +1,11 @@
 # Marketing Monitoring API
 
-<!-- markdown-link-check-disable -->
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/cheqd/market-monitoring?color=green&label=stable%20release&style=flat-square)](https://github.com/cheqd/market-monitoring/releases/latest) ![GitHub Release Date](https://img.shields.io/github/release-date/cheqd/market-monitoring?color=green&style=flat-square) [![GitHub license](https://img.shields.io/github/license/cheqd/market-monitoring?color=blue&style=flat-square)](https://github.com/cheqd/market-monitoring/blob/main/LICENSE)
 
 [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/cheqd/market-monitoring?include_prereleases&label=dev%20release&style=flat-square)](https://github.com/cheqd/market-monitoring/releases/) ![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/cheqd/market-monitoring/latest?style=flat-square) [![GitHub contributors](https://img.shields.io/github/contributors/cheqd/market-monitoring?label=contributors%20%E2%9D%A4%EF%B8%8F&style=flat-square)](https://github.com/cheqd/market-monitoring/graphs/contributors)
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/cheqd/market-monitoring/Workflow%20Dispatch?label=workflows&style=flat-square)](https://github.com/cheqd/market-monitoring/actions/workflows/dispatch.yml) [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/cheqd/market-monitoring/CodeQL?label=CodeQL&style=flat-square)](https://github.com/cheqd/market-monitoring/actions/workflows/codeql.yml) ![GitHub repo size](https://img.shields.io/github/repo-size/cheqd/market-monitoring?style=flat-square)
 
-<!-- markdown-link-check-enable -->
 ## ℹ️ Overview
 
 This repository contains a smaller helper app that fetches the latest price of a given token from the [CoinGecko's API](https://www.coingecko.com/en/api) and compares its price across different markets to detect if it is susceptible to arbitrage opportunities.
