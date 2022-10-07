@@ -1,4 +1,4 @@
-const { COIN_GECKO_TOKEN_ID } = require("../helpers/constants");
+const { COINGECKO_TOKEN_ID } = require("../helpers/constants");
 
 class Tickers {
   getPrices(coingeckoTickers) {
@@ -7,7 +7,7 @@ class Tickers {
       let coin_pair = {
         market: ticker.market.name,
         coin_pair:
-          ticker.coin_id === COIN_GECKO_TOKEN_ID
+          ticker.coin_id === COINGECKO_TOKEN_ID
             ? ticker.target_coin_id
             : ticker.coin_id,
         price: ticker.converted_last.usd,
