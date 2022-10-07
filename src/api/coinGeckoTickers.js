@@ -1,9 +1,9 @@
 const CoinGecko = require("coingecko-api");
-const { COIN_GECKO_CHEQ_COIN_ID } = require("../helpers/constants");
+const { COIN_GECKO_TOKEN_ID } = require("../helpers/constants");
 
-async function getCoinGeckoTickersDataForCheqdToken() {
+async function getCoinGeckoTickersDataForToken() {
   const CoinGeckoClient = new CoinGecko();
-  let data = await CoinGeckoClient.coins.fetchTickers(COIN_GECKO_CHEQ_COIN_ID);
+  let data = await CoinGeckoClient.coins.fetchTickers(COIN_GECKO_TOKEN_ID);
   if (!data.success) {
     return {
       message: data.message,
@@ -13,5 +13,5 @@ async function getCoinGeckoTickersDataForCheqdToken() {
   return data.data;
 }
 
-exports.getCoinGeckoTickersDataForCheqdToken =
-  getCoinGeckoTickersDataForCheqdToken;
+exports.getCoinGeckoTickersDataForToken =
+  getCoinGeckoTickersDataForToken;
