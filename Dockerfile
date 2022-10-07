@@ -4,9 +4,6 @@
 
 FROM node:16-alpine AS runner
 
-# Install pre-requisite packages
-RUN apk update && apk add --no-cache bash ca-certificates curl
-
 # Set working directory & bash defaults
 WORKDIR /home/node/app
 
@@ -18,7 +15,7 @@ RUN npm ci
 
 # Build-time arguments
 ARG NPM_CONFIG_LOGLEVEL
-ARG PORT=8787
+ARG PORT=3000
 ARG MARKET_ARBITRAGE_THRESHOLD=10.0
 ARG COINGECKO_TOKEN_ID="cheqd-network"
 
@@ -30,6 +27,9 @@ ENV COINGECKO_TOKEN_ID ${COINGECKO_TOKEN_ID}
 
 # Set folder permissions
 RUN chown -R node:node /home/node/app
+
+# Install pre-requisite packages
+RUN apk update && apk add --no-cache bash ca-certificates curl
 
 # Specify default port
 EXPOSE ${PORT}
