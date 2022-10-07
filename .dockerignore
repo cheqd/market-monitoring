@@ -1,9 +1,6 @@
 # Skip unncecessary folders
 .github
-dist
-cypress
 node_modules
-tests
 
 # Skip unnecessary files
 **/*.md

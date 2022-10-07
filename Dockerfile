@@ -1,11 +1,11 @@
 ###############################################################
-###        STAGE 1: Runtime BigDipper container        		###
+###         STAGE 1: Build market-monitoring app            ###
 ###############################################################
 
-FROM node:16-alpine AS bigdipper
+FROM node:16-alpine AS runner
 
 # Install pre-requisite packages
-RUN apk update && apk add --no-cache git bash
+RUN apk update && apk add --no-cache bash ca-certificates curl
 
 # Set working directory & bash defaults
 WORKDIR /home/node/app
@@ -17,25 +17,15 @@ COPY . .
 RUN npm ci
 
 # Build-time arguments
-ARG NODE_ENV="production"
-ARG NEXT_PUBLIC_GRAPHQL_URL
-ARG NEXT_PUBLIC_GRAPHQL_WS
-ARG NEXT_PUBLIC_RPC_WEBSOCKET
-ARG NEXT_PUBLIC_CHAIN_TYPE
 ARG NPM_CONFIG_LOGLEVEL
-ARG PORT=3000
+ARG PORT=8787
 
 # Run-time environment variables
-ENV NEXT_PUBLIC_GRAPHQL_URL ${NEXT_PUBLIC_GRAPHQL_URL}
-ENV NEXT_PUBLIC_GRAPHQL_WS ${NEXT_PUBLIC_GRAPHQL_WS}
-ENV NEXT_PUBLIC_RPC_WEBSOCKET ${NEXT_PUBLIC_RPC_WEBSOCKET}
-ENV NEXT_PUBLIC_CHAIN_TYPE ${NEXT_PUBLIC_CHAIN_TYPE}
 ENV NPM_CONFIG_LOGLEVEL ${NPM_CONFIG_LOGLEVEL}
-ENV NODE_ENV ${NODE_ENV}
 ENV PORT ${PORT}
 
-# Build the app
-RUN npm run build
+# Set folder permissions
+RUN chown -R node:node /home/node/app
 
 # Specify default port
 EXPOSE ${PORT}
