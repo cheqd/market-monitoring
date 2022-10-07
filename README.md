@@ -20,7 +20,7 @@ The app is pre-configured to assess arbitrage opportunities for a given token's 
 
 The other parameter that needs to be set is a **market arbitrage threshold** (e.g., 10%), which is the allowed percentage difference allowed before a market pair is counted as susceptible to arbitrage.
 
-The app is invoked by hitting the `/arbitrage` endpoint, which returns a JSON response with the following details.
+The app is invoked hitting the `/` endpoint (with a `GET` request), which returns a JSON response with the following details.
 
 ### Response Details
 
