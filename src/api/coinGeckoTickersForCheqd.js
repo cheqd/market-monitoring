@@ -1,5 +1,5 @@
-const CoinGecko = require("coingecko-api");
-const { COIN_GECKO_CHEQ_COIN_ID } = require("../helpers/constants");
+const CoinGecko = require('coingecko-api');
+const { COIN_GECKO_CHEQ_COIN_ID } = require('../helpers/constants');
 
 async function getCoinGeckoTickersDataForCheqdToken() {
   const CoinGeckoClient = new CoinGecko();
