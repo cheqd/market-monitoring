@@ -28,15 +28,15 @@ Compares the token price for given token, e.g., CHEQ against a given token pair 
 
 ```json
 {
-  "market_pair_id": "01",
-  "market_name_a": "Osmosis",
-  "coin_price_a": 0.03859061,
-  "coin_pair_a": "osmosis",
-  "market_name_b": "Gate.io",
-  "coin_price_b": 0.03902044,
-  "coin_pair_b": "tether",
+  "marketPairId": "01",
+  "marketName1": "Osmosis",
+  "coinPrice1": 0.03859061,
+  "coinPair1": "osmosis",
+  "marketName2": "Gate.io",
+  "coinPrice2": 0.03902044,
+  "coinPair2": "tether",
   "arbitragePossible": false,
-  "percentage_delta": 1.1076515521952248
+  "percentageDelta": 1.1076515521952248
 }
 ```
 
@@ -70,15 +70,15 @@ An array of items containing `coin_pair`, `market` and `price` of given token on
   ],
   "arbitrageOpportunities": [
     {
-      "market_pair_id": "01",
-      "market_name_a": "Osmosis",
-      "coin_price_a": 0.03859061,
-      "coin_pair_a": "osmosis",
-      "market_name_b": "Gate.io",
-      "coin_price_b": 0.03902044,
-      "coin_pair_b": "tether",
+      "marketPairId": "01",
+      "marketName1": "Osmosis",
+      "coinPrice1": 0.03859061,
+      "coinPair1": "osmosis",
+      "marketName2": "Gate.io",
+      "coinPrice2": 0.03902044,
+      "coinPair2": "tether",
       "arbitragePossible": false,
-      "percentage_delta": 1.1076515521952248
+      "percentageDelta": 1.1076515521952248
     }
   ]
 }
