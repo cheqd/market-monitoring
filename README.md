@@ -10,7 +10,7 @@
 
 This repository contains a smaller helper app that fetches the latest price of a given token from the [CoinGecko's API](https://www.coingecko.com/en/api) and compares its price across different markets to detect if it is susceptible to arbitrage opportunities.
 
-This helper app is used by the [Cosmos Custom Data API](https://github.com/cheqd/market-monitoring) to trigger alerts in case there are arbitrage opportunities flagged.
+This helper app is used by the [Cosmos Custom Data API](https://github.com/cheqd/data-api) to trigger alerts in case there are arbitrage opportunities flagged.
 
 ## 📖 Usage
 
@@ -28,17 +28,15 @@ Compares the token price for given token, e.g., CHEQ against a given token pair 
 
 ```json
 {
-  "market_a": {
-    "coin_pair": "osmosis",
-    "market": "Osmosis",
-    "price": 0.03487637
-  },
-  "market_b": {
-    "coin_pair": "tether",
-    "market": "Uniswap (v3)",
-    "price": 0.0368916
-  },
-  "percentage_delta": 5.615959320014207
+  "market_pair_id": "01",
+  "market_name_a": "Osmosis",
+  "coin_price_a": 0.03859061,
+  "coin_pair_a": "osmosis",
+  "market_name_b": "Gate.io",
+  "coin_price_b": 0.03902044,
+  "coin_pair_b": "tether",
+  "arbitragePossible": false,
+  "percentage_delta": 1.1076515521952248
 }
 ```
 
@@ -54,62 +52,33 @@ An array of items containing `coin_pair`, `market` and `price` of given token on
 }
 ```
 
-#### `hasArbitrageOpportunities`
-
-A boolean which will set to `true` if _any_ of the market pairs have a percentage difference that exceeds the defined threshold.
-
-```json
-"hasArbitrageOpportunities": true
-```
-
 ### Sample Response
 
 ```json
 {
-  "arbitrageOpportunities": [
-    {
-      "market_a": {
-        "coin_pair": "osmosis",
-        "market": "Osmosis",
-        "price": 0.03487637
-      },
-      "market_b": {
-        "coin_pair": "tether",
-        "market": "BitMart",
-        "price": 0.03575065
-      },
-      "percentage_delta": 2.475766356841914
-    },
-    {
-      "market_a": {
-        "coin_pair": "osmosis",
-        "market": "Osmosis",
-        "price": 0.03487637
-      },
-      "market_b": {
-        "coin_pair": "tether",
-        "market": "Uniswap (v3)",
-        "price": 0.0368916
-      },
-      "percentage_delta": 5.615959320014207
-    }
-  ],
-  "hasArbitrageOpportunities": true,
   "prices": [
     {
-      "coin_pair": "osmosis",
       "market": "Osmosis",
-      "price": 0.03487637
+      "coin_pair": "osmosis",
+      "price": 0.03859061
     },
     {
+      "market": "Gate.io",
       "coin_pair": "tether",
-      "market": "BitMart",
-      "price": 0.03575065
-    },
+      "price": 0.03902044
+    }
+  ],
+  "arbitrageOpportunities": [
     {
-      "coin_pair": "tether",
-      "market": "Uniswap (v3)",
-      "price": 0.0368916
+      "market_pair_id": "01",
+      "market_name_a": "Osmosis",
+      "coin_price_a": 0.03859061,
+      "coin_pair_a": "osmosis",
+      "market_name_b": "Gate.io",
+      "coin_price_b": 0.03902044,
+      "coin_pair_b": "tether",
+      "arbitragePossible": false,
+      "percentage_delta": 1.1076515521952248
     }
   ]
 }
