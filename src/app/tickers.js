@@ -5,7 +5,7 @@ class Tickers {
     const prices = [];
     coingeckoTickers.forEach((ticker) => {
       let coinPair = {
-        marketName: ticker.marketName.name,
+        marketName: ticker.market.name,
         coinPair:
           ticker.coin_id === COINGECKO_TOKEN_ID
             ? ticker.target_coin_id
