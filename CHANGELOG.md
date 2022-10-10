@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/cheqd/market-monitoring/compare/1.1.0...1.1.1) (2022-10-10)
+
+
+### Bug Fixes
+
+* Reading undefined property ([#9](https://github.com/cheqd/market-monitoring/issues/9)) ([7421316](https://github.com/cheqd/market-monitoring/commit/7421316cb52f416d93c784496dc241b8185d293f))
+
 ## [1.1.0](https://github.com/cheqd/market-monitoring/compare/1.0.1...1.1.0) (2022-10-10)
 
 
