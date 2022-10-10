@@ -10,18 +10,18 @@ class FlagArbitrage {
     for (let i = 0; i < prices.length; i++) {
       for (let j = i + 1; j < prices.length; j++) {
         const percentageDelta = this.calculateDifferencePercentage(
-          prices[i].price,
-          prices[j].price
+          prices[i].coinPrice,
+          prices[j].coinPrice
         );
 
         arbitrageOpportunities.push({
           marketPairId: `${i}${j}`,
-          marketName1: prices[i].market,
-          coinPair1: prices[i].coin_pair,
-          coinPrice1: prices[i].price,
-          marketName2: prices[j].market,
-          coinPair2: prices[j].coin_pair,
-          coinPrice2: prices[j].price,
+          marketName1: prices[i].marketName,
+          coinPair1: prices[i].coinPair,
+          coinPrice1: prices[i].coinPrice,
+          marketName2: prices[j].marketName,
+          coinPair2: prices[j].coinPair,
+          coinPrice2: prices[j].coinPrice,
           arbitragePossible: percentageDelta > MARKET_ARBITRAGE_THRESHOLD,
           percentageDelta: percentageDelta,
         });

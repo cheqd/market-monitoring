@@ -42,13 +42,13 @@ Compares the token price for given token, e.g., CHEQ against a given token pair 
 
 #### `prices`
 
-An array of items containing `coin_pair`, `market` and `price` of given token on that market and token pair.
+An array of items containing `coinPair`, `marketName` and `coinPrice` of given token on that market and token pair.
 
 ```json
 {
-  "coin_pair": "osmosis",
-  "market": "Osmosis",
-  "price": 0.03487637
+  "coinPair": "osmosis",
+  "marketName": "Osmosis",
+  "coinPrice": 0.03487637
 }
 ```
 
@@ -58,14 +58,14 @@ An array of items containing `coin_pair`, `market` and `price` of given token on
 {
   "prices": [
     {
-      "market": "Osmosis",
-      "coin_pair": "osmosis",
-      "price": 0.03859061
+      "marketName": "Osmosis",
+      "coinPair": "osmosis",
+      "coinPrice": 0.03859061
     },
     {
-      "market": "Gate.io",
-      "coin_pair": "tether",
-      "price": 0.03902044
+      "marketName": "Gate.io",
+      "coinPair": "tether",
+      "coinPrice": 0.03902044
     }
   ],
   "arbitrageOpportunities": [
