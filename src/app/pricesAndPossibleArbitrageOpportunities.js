@@ -1,6 +1,6 @@
-const { getCoinGeckoTickersDataForToken } = require("../api/coinGeckoTickers");
-const { FlagArbitrage } = require("./flagArbitrage");
-const { Tickers } = require("./tickers");
+const { getCoinGeckoTickersDataForToken } = require('../api/coinGeckoTickers');
+const { FlagArbitrage } = require('./flagArbitrage');
+const { Tickers } = require('./tickers');
 
 async function pricesAndPossibleArbitrageOpportunities() {
   const coinGeckoData = await getCoinGeckoTickersDataForToken();
@@ -12,7 +12,6 @@ async function pricesAndPossibleArbitrageOpportunities() {
   return {
     prices: prices,
     arbitrageOpportunities: arbitrageOpportunities,
-    hasArbitrageOpportunities: arbitrageOpportunities.length > 0,
   };
 }
 

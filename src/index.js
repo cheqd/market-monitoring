@@ -1,10 +1,10 @@
-const express = require("express");
-const createError = require("http-errors");
+const express = require('express');
+const createError = require('http-errors');
 const app = express();
 
-const arbitrageRouter = require("./routes/arbitrage");
+const arbitrageRouter = require('./routes/arbitrage');
 
-app.use("/", arbitrageRouter);
+app.use('/', arbitrageRouter);
 app.use((_, __, next) => {
   next(createError(404));
 });

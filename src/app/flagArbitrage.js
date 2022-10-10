@@ -1,4 +1,4 @@
-const { MARKET_ARBITRAGE_THRESHOLD } = require("../helpers/constants");
+const { MARKET_ARBITRAGE_THRESHOLD } = require('../helpers/constants');
 
 class FlagArbitrage {
   calculateDifferencePercentage(price_a, price_b) {
@@ -6,21 +6,25 @@ class FlagArbitrage {
   }
 
   arbitrageOpportunities(prices) {
-    var arbitrageOpportunities = [];
-
+    let arbitrageOpportunities = [];
     for (let i = 0; i < prices.length; i++) {
       for (let j = i + 1; j < prices.length; j++) {
-        const percentage_delta = this.calculateDifferencePercentage(
-          prices[i].price,
-          prices[j].price
+        const percentageDelta = this.calculateDifferencePercentage(
+          prices[i].coinPrice,
+          prices[j].coinPrice
         );
-        if (percentage_delta > MARKET_ARBITRAGE_THRESHOLD) {
-          arbitrageOpportunities.push({
-            market_a: prices[i],
-            market_b: prices[j],
-            percentage_delta: percentage_delta
-          });
-        }
+
+        arbitrageOpportunities.push({
+          marketPairId: `${i}${j}`,
+          marketName1: prices[i].marketName,
+          coinPair1: prices[i].coinPair,
+          coinPrice1: prices[i].coinPrice,
+          marketName2: prices[j].marketName,
+          coinPair2: prices[j].coinPair,
+          coinPrice2: prices[j].coinPrice,
+          arbitragePossible: percentageDelta > MARKET_ARBITRAGE_THRESHOLD,
+          percentageDelta: percentageDelta,
+        });
       }
     }
     return arbitrageOpportunities;
