@@ -1,5 +1,7 @@
 # Changelog
 
+## [1.1.3](https://github.com/cheqd/market-monitoring/compare/1.1.2...1.1.3) (2022-11-04)
+
 ## [1.1.2](https://github.com/cheqd/market-monitoring/compare/1.1.1...1.1.2) (2022-11-01)
 
 ## [1.1.1](https://github.com/cheqd/market-monitoring/compare/1.1.0...1.1.1) (2022-10-10)
