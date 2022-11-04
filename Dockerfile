@@ -41,4 +41,4 @@ USER node
 SHELL ["/bin/bash", "-euo", "pipefail", "-c"]
 
 # Run the application
-CMD [ "npm start" ]
+CMD [ "npm", "start" ]
