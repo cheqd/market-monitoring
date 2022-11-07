@@ -52,18 +52,3 @@ jobs:
         with:
           name: market-monitoring-staging
           path: market-monitoring-staging.tar
-  
-  cache-purge:
-    name: "Purge branch Actions cache"
-    needs: build-docker
-    if: ${{ github.event_name == 'pull_request' }}
-    runs-on: ubuntu-latest
-    
-    steps:
-
-      - name: "Delete Branch Cache Action"
-        uses: snnaplab/delete-branch-cache-action@v1.0.0
-        with:
-          # Specify explicitly because the ref at the time of merging will be a branch name such as 'main', 'develop'
-          ref: refs/pull/${{ github.event.number }}/merge
-          github-token: ${{ secrets.GITHUB_TOKEN }}
