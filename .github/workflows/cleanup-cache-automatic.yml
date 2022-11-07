@@ -11,7 +11,7 @@ defaults:
 jobs:
 
   cache-purge:
-    name: "Purge branch Actions cache"
+    name: "Purge Actions cache"
     runs-on: ubuntu-latest
     
     steps:
