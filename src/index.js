@@ -4,7 +4,7 @@ const app = express();
 
 const arbitrageRouter = require('./routes/arbitrage');
 
-app.use('/arbitrage', arbitrageRouter);
+app.use('/', arbitrageRouter);
 app.use((_, __, next) => {
   next(createError(404));
 });

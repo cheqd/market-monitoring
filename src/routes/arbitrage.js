@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const {
-  pricesAndPossibleArbitrageOpportunites,
-} = require('../app/pricesAndPossibleArbitrageOpportunites');
+  pricesAndPossibleArbitrageOpportunities,
+} = require('../app/pricesAndPossibleArbitrageOpportunities');
 router.get('/', async (_, res, __) => {
-  const data = await pricesAndPossibleArbitrageOpportunites();
+  const data = await pricesAndPossibleArbitrageOpportunities();
   res.json(data);
 });
 
