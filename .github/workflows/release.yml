@@ -102,7 +102,7 @@ jobs:
             org.opencontainers.image.documentation="https://github.com/cheqd/marketing-monitoring/blob/main/README.md"
       
       - name: Build image with labels
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: .
           file: Dockerfile
