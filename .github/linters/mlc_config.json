@@ -1,3 +1,4 @@
 {
-    "aliveStatusCodes": [0, 200, 206, 999]
+    "aliveStatusCodes": [0, 200, 206, 403, 501, 999],
+    "retryOn429": true
 }
