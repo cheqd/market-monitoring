@@ -29,12 +29,12 @@
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^8.0.7",
     "@semantic-release/npm": "^10.0.3",
-    "@semantic-release/release-notes-generator": "^10.0.3",
+    "@semantic-release/release-notes-generator": "^11.0.1",
     "conventional-changelog-conventionalcommits": "^5.0.0",
-    "eslint": "^8.38.0",
+    "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-typescript": "^3.0.0",
-    "semantic-release": "^21.0.1"
+    "semantic-release": "^21.0.2"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
