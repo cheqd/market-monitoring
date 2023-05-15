@@ -2,7 +2,7 @@
 ###         STAGE 1: Build market-monitoring app            ###
 ###############################################################
 
-FROM node:18-alpine AS runner
+FROM node:20-alpine AS runner
 
 # Set working directory & bash defaults
 WORKDIR /home/node/app
