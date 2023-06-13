@@ -25,16 +25,16 @@
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/commit-analyzer": "^10.0.0",
+    "@semantic-release/commit-analyzer": "^10.0.1",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^9.0.2",
-    "@semantic-release/npm": "^10.0.3",
-    "@semantic-release/release-notes-generator": "^11.0.2",
+    "@semantic-release/github": "^9.0.3",
+    "@semantic-release/npm": "^10.0.4",
+    "@semantic-release/release-notes-generator": "^11.0.3",
     "conventional-changelog-conventionalcommits": "^5.0.0",
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-config-typescript": "^3.0.0",
-    "semantic-release": "^21.0.3"
+    "semantic-release": "^21.0.5"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
