@@ -34,7 +34,7 @@
     "eslint": "^8.47.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-typescript": "^3.0.0",
-    "semantic-release": "^21.0.7"
+    "semantic-release": "^22.0.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
